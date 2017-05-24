@@ -187,10 +187,10 @@ def main():
 
     y_pred = model.predict(testX)
 
-    print("TEST INPUT \n")
-    print(testX)
-    print("Predicted Values \n")
-    print(y_pred)
+    #print("TEST INPUT \n")
+    #print(testX)
+    #print("Predicted Values \n")
+    #print(y_pred)
 
     y_smp = np.zeros(y_pred.shape[0])
     print(y_pred.shape)
@@ -203,7 +203,7 @@ def main():
         cpn = np.random.choice([0, 1, 2, 3,4,5,6,7,8,9], p=priors)
         # Sample a data point for the chosen mixture
         y_smp[i] = np.random.normal(loc=means[cpn], scale=1.0/np.sqrt(precs[cpn]))
-        print(cpn)
+        
 		
 
     plt.scatter(testX, testY,c='red', label='True data')
